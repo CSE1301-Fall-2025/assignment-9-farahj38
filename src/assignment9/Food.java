@@ -8,19 +8,28 @@ public class Food {
 
 	public static final double FOOD_SIZE = 0.02;
 	private double x, y;
+	private Color color;
 	
 	/**
 	 * Creates a new Food at a random location
 	 */
 	public Food() {
-		//FIXME
+		this.x = Math.random();
+		this.y = Math.random();
+		this.color = Color.red;
 	}
-	
+	public double getX() {
+		return this.x;
+	}
+	public double getY() {
+		return this.y;
+	}
 	/**
 	 * Draws the Food
 	 */
 	public void draw() {
-		//FIXME
+		StdDraw.setPenColor(this.color);
+		StdDraw.filledRectangle(x,y,FOOD_SIZE/2,FOOD_SIZE/2);
 	}
 	
 }
